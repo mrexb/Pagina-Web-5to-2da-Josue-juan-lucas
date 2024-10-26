@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(131, 199, 105);
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: flex-start;
+    /* Alinea al inicio verticalmente */
+    height: 100vh;
+    /* Altura completa de la ventana */
+    margin: 0;
+    /* Elimina márgenes por defecto */
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre los contenedores */
+    width: 80%;
+    /* Ancho del contenedor principal */
+}
+
+.container-inicio,
+.container-final {
+    background-color: greenyellow;
+    border: 3px solid blueviolet;
+    padding: 15px;
+    width: 35px;
+    border-radius: 50px;
+    /* Ancho fijo para los contenedores */
+}
+
+.box-inicio {
+    background-color: rgb(9, 163, 112);
+    padding: 10px;
+    margin: 0px;
+    /* Espaciado entre los divs de inicio */
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 35px;
+}
+
+.container-autos {
+    position: relative;
+    /* Posiciona sobre el contenedor principal */
+    display: flex;
+    flex-direction: column;
+    /* Alinea los autos verticalmente */
+    justify-content: center;
+    /* Centra verticalmente los autos */
+}
+
+.autoA,
+.autoB {
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 5px 0;
+    /* Espaciado entre los autos */
+}
+
+
+/* Animaciones para simular movimiento horizontal */
+
+@keyframes moverAutoA {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(250px);
+    }
+    /* Distancia a mover */
+}
+
+@keyframes moverAutoB {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(253px);
+    }
+    /* Distancia a mover */
+}
+
+
+/* Aplicar animaciones al cargar la página */
+
+.autoA {
+    animation: moverAutoA 4s linear forwards;
+    /* Auto A se mueve más rápido */
+}
+
+.autoB {
+    animation: moverAutoB 5s linear forwards;
+    /* Auto B se mueve más lento */
+}
+
+.container-final {
+    background-color: greenyellow;
+    border: 5px solid blueviolet;
+    padding: 20px;
+}
